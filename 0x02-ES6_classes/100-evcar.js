@@ -1,3 +1,4 @@
+// eslint-disable-next-line max-classes-per-file
 import Car from './10-car';
 
 export default class EVCar extends Car {
