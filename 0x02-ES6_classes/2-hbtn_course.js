@@ -54,12 +54,12 @@ export default class HolbertonCourse {
     this._length = newLength;
   }
 
-  // Getter for length
+  // Getter for array of students
   get students() {
     return this._students;
   }
 
-  // Setter for length
+  // Setter for array of students
   set students(newStudents) {
     if (!Array.isArray(newStudents)) {
       throw new TypeError('Students must be an array of strings');
