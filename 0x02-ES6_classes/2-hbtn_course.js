@@ -1,7 +1,7 @@
 /**
  * creates HolbertonCourse Class
  */
-class HolbertonCourse {
+export default class HolbertonCourse {
   /**
      * creates a new @see {@link HolbertonCourse}
      *
