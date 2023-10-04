@@ -1,12 +1,12 @@
 /**
  * 
- * @param {*} student_list : contains the student objects
+ * @param {Array} students : contains the student objects
  * @returns (an array of students ids from a list of object)
  */
 
-export default function getListStudentIds(student_list) {
-    if (student_list instanceof Array) {
-        return student_list.map((student) => student.id)
+export default function getListStudentIds(students) {
+    if (students instanceof Array) {
+      return students.map((student) => student.id);
     }
     return [];
-}
+  }
