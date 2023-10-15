@@ -51,13 +51,13 @@ export interface DirectorInterface {
   
   export function executeWork(employee: (Director | Teacher)) {
     if (isDirector(employee)) {
+      //to let typescript know that the employee is an instance of Director we use 'as'
       return (employee as Director).workDirectorTasks();
     }
     return (employee as Teacher).workTeacherTasks();
   }
   
   export type Subjects = ('Math' | 'History');
-  
   export function teachClass(todayClass: Subjects): string {
     if (todayClass === 'Math') {
       return 'Teaching Math';
@@ -66,4 +66,14 @@ export interface DirectorInterface {
       return 'Teaching History';
     }
   }
+
+export function teachClass1(todayClass: Subjects): string {
+    if (todayClass === 'Math') {
+      return 'Teaching Math';
+    }
+    else if (todayClass === 'History') {
+      return 'Teaching History';
+    }
+}
+
   

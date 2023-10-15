@@ -47,6 +47,7 @@ const styleSheet = `
 
   td:nth-child(1) {
     text-align: center;
+    display(studentsList);
   }
 `;
 
@@ -54,19 +55,20 @@ const styleSheet = `
  * renders a table for student information
  * @param students 
  */
+
 export const display = (students: Array<Student>) : void => {
     const table = document.createElement('table');
     const tableHead = document.createElement('thead');
     const tableRowHead = document.createElement('tr');
     const tableBody = document.createElement('tbody');
     tableRowHead.insertAdjacentHTML('beforeend', '<td>FirtName</td>');
-    tableRowHead.insertAdjacentHTML('beforeend', '<td>Location</td>')
+    tableRowHead.insertAdjacentHTML('beforeend', '<td>Location</td>');
     tableHead.insertAdjacentElement('beforeend', tableRowHead);
 
     students.forEach((student) => {
         const tableRow2 = document.createElement('tr');
         tableRow2.insertAdjacentHTML('beforeend', `<td>${student.firstName}</td>`);
-        tableRow2.insertAdjacentHTML('beforeend', `<td>${student.location}</td>`);
+         tableRow2.insertAdjacentHTML('beforeend', `<td>${student.location}</td>`);
         tableBody.insertAdjacentElement('beforeend', tableRow2);
     })
     table.insertAdjacentElement('beforeend', tableHead);

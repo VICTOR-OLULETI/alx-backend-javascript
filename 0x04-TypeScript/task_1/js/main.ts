@@ -27,7 +27,7 @@ export interface IStudentClass {
     workOnHomework(): string;
     displayName(): string;
   }
-  
+
 export class StudentClass implements IStudentClass {
     private _firstName!: string;
     private _lastName!: string;
